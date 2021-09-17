@@ -3,7 +3,7 @@ library(jsonlite)
 base_api <- "http://192.168.8.109:8080"
 
 tryCatch(
-  fromJSON(paste0(base_api, "/status")), 
+  fromJSON(paste0(base_api, "/ping")), 
   error = function(e){
     return(as.character(e))
     }
